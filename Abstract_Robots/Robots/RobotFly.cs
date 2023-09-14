@@ -10,6 +10,6 @@ namespace Robots_inc
     //שימו לב שעליכם להתייחס גם לתעופה
     class RobotFly : RobotSpy
     {
-
+        ///הערה
     }
 }

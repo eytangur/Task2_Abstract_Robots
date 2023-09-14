@@ -12,10 +12,25 @@ namespace Robots_inc
         public RobotQuad() : base("RobotSpy")
         { }
 
+        public override void MoveBackward()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void MoveForward()
         {
             for (int i = 0; i < 4; i++)
                 this.MoveLeg(i, 1);
+        }
+
+        public override void TurnLeft()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void TurnRight()
+        {
+            throw new NotImplementedException();
         }
 
         //2. השלימו את התנועות החסרות מתוך המצגת או על הבנתכם
