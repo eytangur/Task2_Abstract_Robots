@@ -9,7 +9,7 @@ namespace Robots_inc
     public class RobotWheels : RobotSpy
     {
         //1. עדכנו את הפעולה הבונה כך שתתאים לפעולת במחלקת העל
-        public RobotWheels() : base("Spyke") { } 
+        public RobotWheels() : base("Spyke") { }
 
         public override void MoveForward()
         {
@@ -40,7 +40,5 @@ namespace Robots_inc
         {
             this.SetBatteryStatus(2);
         }
-
-        
     }
 }

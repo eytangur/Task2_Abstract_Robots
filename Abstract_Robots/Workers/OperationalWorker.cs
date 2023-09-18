@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Robots_inc
 {
-    public class OperationalWorker //1. כתבו את המחלקה המתאימה להורשה 
+    public class OperationalWorker : Worker
     {
-        //2. השלימות את התכונות החסרות
+        private int numHours;
+        private int Hoursalary;
 
-        public OperationalWorker(string name, string id, DateTime bDate, string pass)
+
+        public OperationalWorker(int numHours, int Hoursalary, string name, string id, DateTime bDate, string pass)
             : base(name, id, bDate, pass)
         {
-            //3. השלימו את הקוד החסר לשמירת שכר בתכונה המתאימה
-            // ?האם נדרשים פרמטרים נוספים
+            this.numHours = numHours;
+            this.Hoursalary = Hoursalary;
         }
 
-        //4. כתבו פעולה דורסת לחישוב שכר
+        public override double Salary()
+        {
+            return this.numHours * this.Hoursalary;
+        }
 
     }
 }

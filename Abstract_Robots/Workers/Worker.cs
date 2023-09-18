@@ -16,23 +16,24 @@ namespace Robots_inc
 
         public Worker(string name, string id, DateTime bDate, string pass)
         {
-            //משימה 1
-            //השלימו את הבנאי המקבל הפרמטרים הנחוצים ליצירת עובד חדש
+            this.fullName = name;
+            this.idNumber = id;
+            this.birthDate = bDate;
+            this.password = pass;
         }
-        //משימה 2
-        //get כתבו פעולות מאחזרות 
+        public string Password { get { return password; } set { password = value; } }
+        public string FullName { get { return fullName; } }
 
-        //משימה 3
-        //רק לתכונות שניתן לשנות - set כתבו פעולות מעדכנות
+        public string GetidNumber() { return this.idNumber; }
+        public DateTime GetBirthDate() { return this.birthDate; }
 
-        //משימה 4
-        // כתבו חתימה פעולה אבסטרקטית לחישוב שכר
+        public abstract double Salary();
 
         public override string ToString()
         {
             string str = "";
-            if(birthDate.Equals(DateTime.Today))
-                str=" - HappyBirthDay";
+            if (birthDate.Equals(DateTime.Today))
+                str = " - HappyBirthDay";
             return fullName + " ID." + idNumber + str;
 
         }
